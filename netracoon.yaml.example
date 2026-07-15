@@ -1,0 +1,34 @@
+# NetRacoon example configuration
+# Usage: netracoon --config netracoon.yaml
+
+target: 192.168.1.0/24
+profile: quick          # quick | deep | stealth
+
+# Override profile settings (optional)
+# ports: top            # top | 22,80,443 | 1-1024
+# timeout: 1.5
+# workers: 100
+# ping: true
+# grab_banners: true
+
+# Rate limiting (ethical scanning)
+# rate: 100             # max requests per second
+# delay: 0.1            # delay between requests (seconds)
+
+# Extra modules
+# os_fingerprint: true
+# traceroute: false
+# subdomains: false
+
+# Output
+output: results/scan.json
+csv: results/scan.csv
+html: results/scan.html
+
+# Logging
+# log: scan.log
+# verbose: false
+
+# History
+# save_history: true
+# diff: ~/.netracoon/history/scan_previous.json

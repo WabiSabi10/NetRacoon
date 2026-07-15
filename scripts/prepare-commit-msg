@@ -1,0 +1,11 @@
+#!/bin/sh
+# Commit mesajindaki istenmeyen trailer satirlarini temizler.
+# Kurulum: ./scripts/install-git-hooks.sh
+
+if [ -f "$1" ]; then
+  if sed --version >/dev/null 2>&1; then
+    sed -i '/^Co-authored-by:/d' "$1"
+  else
+    sed -i '' '/^Co-authored-by:/d' "$1"
+  fi
+fi
